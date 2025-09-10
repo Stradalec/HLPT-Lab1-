@@ -4,8 +4,8 @@ fun <T : Comparable<T>> Iterable<T>.groupSort(action: (key: T, count: Int) -> Un
 
 fun main(args: Array<String>) {
     if (args.isNotEmpty()) {
-        args.toList().groupSort { key, count ->
-            println("$key $count")
+        args.toList().groupSort { value, key ->
+            println("$value $key")
         }
     }
     else {
@@ -13,8 +13,8 @@ fun main(args: Array<String>) {
             ?.filter { it.isNotEmpty() }
             ?.map { it.trim('"') }
             ?.toList()
-            ?.groupSort { key, count ->
-                println("$key $count")
+            ?.groupSort { value, key ->
+                println("$value $key")
             }
     }
     
