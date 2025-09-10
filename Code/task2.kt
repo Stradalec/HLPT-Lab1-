@@ -1,6 +1,5 @@
 fun main(args: Array<String>){
-    val inputString = args.sorted()
-    for (word in inputString){
+    args.sorted().forEach{ word ->
         println(word)
     }
 }
