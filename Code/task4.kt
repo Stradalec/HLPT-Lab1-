@@ -1,7 +1,5 @@
 fun main(args: Array<String>){
-    val inputString = args.sorted()
-    val sortedString = inputString.groupingBy {it}.eachCount()
-    for ((word, count) in sortedString){
+    args.sorted().groupingBy {it}.eachCount().forEach{ (word, count) ->
         println("$word $count")
     }
 }
